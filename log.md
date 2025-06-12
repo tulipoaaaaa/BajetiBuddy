@@ -58,11 +58,16 @@
 - Marked `setup-flutter` task as complete in plan.md
 
 ## 2025-06-15
+### Added
+- Created `backend` project folder with TypeScript Express skeleton
+- Implemented environment loader, server entry, API index router, auth controller stub, and error handler middleware
+- Marked new `setup-backend` task as complete in plan.md
+
+## 2025-06-15
 ### Updated
 - Set `AuthSystem` module status to in_progress in context.json
 - Bumped `last_updated` timestamp in context.json
 - Noted `auth-system` task is now in progress in plan.md
-
 
 ## 2025-06-16
 ### Added
