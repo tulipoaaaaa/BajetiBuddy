@@ -63,7 +63,8 @@ BajetiBuddy/
 ├── context.json # Machine-readable project state for Codex
 ├── log.md # Development changelog and decisions
 ├── LICENSE # Apache 2.0 license
-├── mobile/ # Flutter mobile app (to be created)
+├── mobile/ # Flutter mobile app source
+│   └── lib/ # Dart code and features
 ├── backend/ # Node.js API server (to be created)
 ├── ml-models/ # Custom AI models and training scripts (to be created)
 ├── docs/ # Additional documentation (to be created)

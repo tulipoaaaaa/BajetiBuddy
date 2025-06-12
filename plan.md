@@ -13,7 +13,7 @@
 ## Task Decomposition
 
 ### Phase 1: Foundation (M1)
-- [ ] `setup-flutter` - Initialize Flutter project structure
+- [x] `setup-flutter` - Initialize Flutter project structure
 - [ ] `ui-mockups` - Create Figma designs for core screens  
 - [ ] `auth-system` - Implement user registration/login
 - [ ] `expense-tracker` - Build manual expense entry interface
