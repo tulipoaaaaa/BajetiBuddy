@@ -18,7 +18,7 @@ jobs:
 
       - name: Flutter analyze
         run: flutter analyze
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -26,7 +26,7 @@ jobs:
           node-version: 18
 
       - name: Install backend dependencies
-        run: npm ci
+        run: npm install
         working-directory: backend
 
       - name: Run ESLint
@@ -49,7 +49,7 @@ jobs:
         with:
           name: code-quality-reports
           path: |
-            mobile/analysis.html
+            mobile/bajeti_buddy/analysis.html
             backend/eslint-report.html
 
       - name: Post summary comment

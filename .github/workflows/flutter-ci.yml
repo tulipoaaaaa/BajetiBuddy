@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'mobile/**'
+      - 'mobile/bajeti_buddy/**'
 
 jobs:
   build:
@@ -20,19 +20,19 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Analyze
         run: flutter analyze
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Run tests
         run: flutter test
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Build web
         run: flutter build web
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Docker login
         run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
@@ -42,5 +42,5 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/myorg/bajetibuddy-mobile_web:latest -f Dockerfile.web ./mobile
+          docker build -t ghcr.io/myorg/bajetibuddy-mobile_web:latest -f Dockerfile.web ./mobile/bajeti_buddy
           docker push ghcr.io/myorg/bajetibuddy-mobile_web:latest

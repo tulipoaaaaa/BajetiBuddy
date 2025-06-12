@@ -34,11 +34,11 @@ jobs:
 
       - name: Flutter dependencies
         run: flutter pub get
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Run flutter performance benchmark
         run: flutter drive --driver=test_driver/perf_test.dart --target=test_driver/perf_test.dart
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Upload performance artifacts
         uses: actions/upload-artifact@v3
@@ -46,6 +46,6 @@ jobs:
           name: performance-results
           path: |
             backend/loadtests/report.json
-            mobile/build/**/performance
+            mobile/bajeti_buddy/build/**/performance
           # TODO: adjust latency threshold and artifact paths
 
