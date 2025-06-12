@@ -63,3 +63,14 @@
 - Bumped `last_updated` timestamp in context.json
 - Noted `auth-system` task is now in progress in plan.md
 
+
+## 2025-06-16
+### Added
+- Created `ml-models` package with training, inference, and data utilities
+- Implemented `fine_tune_openai.py` for converting CSV to JSONL
+- Added OpenAI inference wrapper and stub pytest
+- Provided sample training dataset and saving helper
+### Updated
+- Marked AI-related tasks as in progress in plan.md
+- Added `ModelTraining` module and updated `AIRecommendations` status in context.json
+- Bumped `last_updated` timestamp
