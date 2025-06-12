@@ -1,0 +1,7 @@
+# Flutter & Node build artifacts
+build/
+node_modules/
+
+# Ignore binary icon assets - tracked via LFS or external storage
+mobile/bajeti_buddy/**/Assets.xcassets/**/*.{png,jpg,jpeg,gif,svg,pdf}
+web/icons/**/*.{png,jpg,jpeg,gif,svg,ico}

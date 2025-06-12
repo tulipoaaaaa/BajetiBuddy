@@ -1,0 +1,6 @@
+name: bajeti_buddy
+version: 0.1.0
+flutter:
+  assets:
+    - Assets.xcassets/
+    - ../../web/icons/
