@@ -80,6 +80,27 @@
 - Added `ModelTraining` module and updated `AIRecommendations` status in context.json
 - Bumped `last_updated` timestamp
 
+## 2025-06-17
+### Added
+- Completed ML pipeline scripts integrating data preparation and training stages.
+- Introduced initial `dvc.yaml` and `.dvc` configuration for dataset versioning.
+- Documented pipeline usage and setup steps in `ml-models/README.md`.
+### Updated
+- Prepared Batch 7 deployment scaffolding and noted upcoming tasks.
+- Created `dvc.yaml` with preprocess, train, evaluate and deploy stages
+- Added `ml-models/pipeline/ml_pipeline.py` script placeholder
+### Updated
+- Added `dvc-pipeline` task to plan.md
+- Created `ml-models/pipeline/README.md` outlining pipeline execution, versioning strategy, and orchestration options.
+
+## 2025-06-17
+### Added
+- Implemented `save_model_version` utility under `ml-models/pipeline`
+- Created accompanying unit test `test_versioning.py`
+### Updated
+- Recorded `model-versioning` task as complete in plan.md
+- Updated `last_updated` timestamp in context.json
+
 ## 2025-06-12
 ### Added
 - Created ml-models/pipeline with stub ml_pipeline.py logging pipeline steps
