@@ -1,9 +1,9 @@
 {
   "version": "0.1.0",
   "project_name": "BajetiBuddy",
-  "last_updated": "2025-06-12T13:02:00Z",
+  "last_updated": "2025-06-14T00:00:00Z",
   "modules": [
-    { "name": "AuthSystem", "status": "planned", "priority": "high" },
+    { "name": "AuthSystem", "status": "in_progress", "priority": "high" },
     { "name": "ExpenseTracker", "status": "planned", "priority": "high" },
     { "name": "BudgetCalculator", "status": "planned", "priority": "high" },
     { "name": "MpesaIntegration", "status": "planned", "priority": "medium" },

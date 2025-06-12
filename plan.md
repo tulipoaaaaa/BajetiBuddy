@@ -15,8 +15,8 @@
 ### Phase 1: Foundation (M1)
 - [x] `setup-flutter` - Initialize Flutter project structure
 - [x] `setup-backend` - Initialize Node.js API skeleton
-- [ ] `ui-mockups` - Create Figma designs for core screens
-- [ ] `auth-system` - Implement user registration/login
+- [ ] `ui-mockups` - Create Figma designs for core screens  
+- [ ] `auth-system` - Implement user registration/login *(in progress)*
 - [ ] `expense-tracker` - Build manual expense entry interface
 - [ ] `budget-calculator` - Core budget calculation logic
 - [ ] `local-storage` - SQLite integration for offline data
