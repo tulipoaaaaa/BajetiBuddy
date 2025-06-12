@@ -1,43 +1,7 @@
-import argparse
-
-
-def preprocess():
-    print("Preprocessing data...")
-
-
-def train():
-    print("Training model...")
-
-
-def evaluate():
-    print("Evaluating model...")
-
-
-def deploy():
-    print("Deploying model...")
-
-
-STAGES = {
-    "preprocess": preprocess,
-    "train": train,
-    "evaluate": evaluate,
-    "deploy": deploy,
-}
-
-
-def main() -> None:
-    parser = argparse.ArgumentParser(description="BajetiBuddy ML pipeline")
-    parser.add_argument("stage", choices=STAGES.keys(), help="Pipeline stage to run")
-    args = parser.parse_args()
-    STAGES[args.stage]()
-
-
-if __name__ == "__main__":
-    main()
-
 """Machine learning pipeline steps."""
 from __future__ import annotations
 
+import argparse
 import logging
 
 # TODO: integrate pipeline with orchestration tools like Airflow, Prefect, or DVC
@@ -70,3 +34,22 @@ def deploy() -> None:
     # TODO: implement deployment logic
     logging.info("Completed deployment step")
 
+
+STAGES = {
+    "preprocess": preprocess,
+    "train": train,
+    "evaluate": evaluate,
+    "deploy": deploy,
+}
+
+
+def main() -> None:
+    """Entry point for running a pipeline stage via the CLI."""
+    parser = argparse.ArgumentParser(description="BajetiBuddy ML pipeline")
+    parser.add_argument("stage", choices=STAGES.keys(), help="Pipeline stage to run")
+    args = parser.parse_args()
+    STAGES[args.stage]()
+
+
+if __name__ == "__main__":
+    main()
