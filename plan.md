@@ -23,6 +23,11 @@
 - [ ] `local-storage` - SQLite integration for offline data
 - [ ] `docker-setup` - Create Dockerfile for backend deployment
 - [ ] `ci-pipeline` - Initialize GitHub Actions workflow
+- [x] `docs-architecture` - Write architecture overview
+- [x] `docs-api-spec` - Document API endpoints
+- [x] `docs-mpesa-guide` - Document M-Pesa integration
+- [x] `postman-collection` - Publish Postman collection
+- [x] `mobile-e2e-tests` - Scaffold integration tests for mobile app
 
 ### Phase 2: Payment Integration (M2)  
 - [ ] `mpesa-sdk` - Integrate M-Pesa Daraja API
