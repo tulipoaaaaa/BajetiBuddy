@@ -1,0 +1,32 @@
+stages:
+  preprocess:
+    cmd: python ml-models/pipeline/ml_pipeline.py preprocess
+    deps:
+      - ml-models/data/kenyan_financial_patterns_sample.csv
+      - ml-models/pipeline/ml_pipeline.py
+    outs:
+      - ml-models/pipeline/preprocessed/
+
+  train:
+    cmd: python ml-models/pipeline/ml_pipeline.py train
+    deps:
+      - ml-models/pipeline/preprocessed/
+      - ml-models/pipeline/ml_pipeline.py
+    outs:
+      - ml-models/pipeline/model/
+
+  evaluate:
+    cmd: python ml-models/pipeline/ml_pipeline.py evaluate
+    deps:
+      - ml-models/pipeline/model/
+      - ml-models/pipeline/ml_pipeline.py
+    outs:
+      - ml-models/pipeline/metrics.json
+
+  deploy:
+    cmd: python ml-models/pipeline/ml_pipeline.py deploy
+    deps:
+      - ml-models/pipeline/model/
+      - ml-models/pipeline/ml_pipeline.py
+    outs:
+      - ml-models/pipeline/deployed/

@@ -82,6 +82,11 @@
 
 ## 2025-06-17
 ### Added
+
+- Created `dvc.yaml` with preprocess, train, evaluate and deploy stages
+- Added `ml-models/pipeline/ml_pipeline.py` script placeholder
+### Updated
+- Added `dvc-pipeline` task to plan.md
 - Created `ml-models/pipeline/README.md` outlining pipeline execution, versioning strategy, and orchestration options.
 
 ## 2025-06-17
