@@ -58,11 +58,16 @@
 - Marked `setup-flutter` task as complete in plan.md
 
 ## 2025-06-15
+### Added
+- Created `backend` project folder with TypeScript Express skeleton
+- Implemented environment loader, server entry, API index router, auth controller stub, and error handler middleware
+- Marked new `setup-backend` task as complete in plan.md
+
+## 2025-06-15
 ### Updated
 - Set `AuthSystem` module status to in_progress in context.json
 - Bumped `last_updated` timestamp in context.json
 - Noted `auth-system` task is now in progress in plan.md
-
 
 ## 2025-06-16
 ### Added
@@ -75,8 +80,44 @@
 - Added `ModelTraining` module and updated `AIRecommendations` status in context.json
 - Bumped `last_updated` timestamp
 
+
 ## 2025-06-12
 ### Added
 - Added milestone for deployment automation and tasks for `ml-pipeline` and `versioning-utility` in plan.md
 ### Notes
 - Documented Batch 7 preparation tasks for deploy configs, Docker, and CI workflows.
+## 2025-06-17
+### Added
+- Completed ML pipeline scripts integrating data preparation and training stages.
+- Introduced initial `dvc.yaml` and `.dvc` configuration for dataset versioning.
+- Documented pipeline usage and setup steps in `ml-models/README.md`.
+### Updated
+- Prepared Batch 7 deployment scaffolding and noted upcoming tasks.
+- Created `dvc.yaml` with preprocess, train, evaluate and deploy stages
+- Added `ml-models/pipeline/ml_pipeline.py` script placeholder
+### Updated
+- Added `dvc-pipeline` task to plan.md
+- Created `ml-models/pipeline/README.md` outlining pipeline execution, versioning strategy, and orchestration options.
+
+## 2025-06-17
+### Added
+- Implemented `save_model_version` utility under `ml-models/pipeline`
+- Created accompanying unit test `test_versioning.py`
+### Updated
+- Recorded `model-versioning` task as complete in plan.md
+- Updated `last_updated` timestamp in context.json
+
+## 2025-06-12
+### Added
+- Created ml-models/pipeline with stub ml_pipeline.py logging pipeline steps
+### Updated
+- Added package init for inference and mocked OpenAI calls in tests
+
+## 2025-06-16
+### Added
+- Docker Compose config in `deploy/docker-compose.yml` for backend, mobile web, and nginx services
+- Nginx reverse proxy config in `deploy/nginx/default.conf`
+- GitHub Actions workflows for backend, mobile, and deployment CI/CD
+### Updated
+- Initial deployment pipeline setup scaffolded
+
