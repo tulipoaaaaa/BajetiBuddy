@@ -43,13 +43,20 @@
       "name": "DeploymentSetup",
       "status": "planned",
       "priority": "low"
-
+    },
+    {
       "name": "MLPipeline",
-      "status": "planned",
-
+      "status": "planned"
+    },
+    {
       "name": "DeploymentPipeline",
       "status": "in_progress",
       "priority": "medium"
+    },
+    {
+      "name": "BackendTests",
+      "status": "in_progress",
+      "priority": "low"
     }
   ],
   "interfaces": [
