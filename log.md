@@ -80,6 +80,10 @@
 - Added `ModelTraining` module and updated `AIRecommendations` status in context.json
 - Bumped `last_updated` timestamp
 
+## 2025-06-17
+### Updated
+- Added `MLPipeline` module to context.json
+- Bumped `last_updated` timestamp
 
 ## 2025-06-12
 ### Added

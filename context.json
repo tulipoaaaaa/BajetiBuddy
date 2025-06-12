@@ -40,6 +40,10 @@
       "priority": "medium"
     },
     {
+
+      "name": "MLPipeline",
+      "status": "planned",
+
       "name": "DeploymentPipeline",
       "status": "in_progress",
       "priority": "medium"
