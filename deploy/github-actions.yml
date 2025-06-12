@@ -1,0 +1,16 @@
+# GitHub Actions CI pipeline (placeholder)
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # TODO: Add build and test steps
+      - run: echo "CI pipeline placeholder"

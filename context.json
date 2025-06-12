@@ -40,6 +40,9 @@
       "priority": "medium"
     },
     {
+      "name": "DeploymentSetup",
+      "status": "planned",
+      "priority": "low"
 
       "name": "MLPipeline",
       "status": "planned",

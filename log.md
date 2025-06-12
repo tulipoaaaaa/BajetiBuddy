@@ -81,6 +81,11 @@
 - Bumped `last_updated` timestamp
 
 ## 2025-06-17
+### Added
+- Created `deploy/` directory with placeholder Dockerfile and GitHub Actions workflow
+### Updated
+- Noted new `docker-setup` and `ci-pipeline` tasks in plan.md
+- Added `DeploymentSetup` module to context.json and bumped timestamp
 ### Updated
 - Added `MLPipeline` module to context.json
 - Bumped `last_updated` timestamp
