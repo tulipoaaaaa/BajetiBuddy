@@ -1,0 +1,103 @@
+{
+  "info": {
+    "name": "BajetiBuddy API",
+    "description": "Sample requests for the BajetiBuddy backend.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"secret\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "budget",
+      "item": [
+        {
+          "name": "getBudget",
+          "request": {
+            "method": "GET",
+            "header": [
+              {"key": "Authorization", "value": "Bearer <token>"}
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/budget/",
+              "host": ["{{baseUrl}}"],
+              "path": ["budget", ""]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "mpesa",
+      "item": [
+        {
+          "name": "stkpush",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"},
+              {"key": "Authorization", "value": "Bearer <token>"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 1000,\n  \"phone\": \"254700000000\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/mpesa/stkpush",
+              "host": ["{{baseUrl}}"],
+              "path": ["mpesa", "stkpush"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ai",
+      "item": [
+        {
+          "name": "advise",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"},
+              {"key": "Authorization", "value": "Bearer <token>"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"monthlyIncome\": 45000,\n  \"expenses\": []\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/ai/advise",
+              "host": ["{{baseUrl}}"],
+              "path": ["ai", "advise"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

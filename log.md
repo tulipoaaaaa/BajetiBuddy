@@ -140,3 +140,11 @@
 ### Updated
 - Added `backend-tests` task in plan.md
 - Added `BackendTests` module in context.json and bumped timestamp
+- Architecture overview in docs/ARCHITECTURE.md with mermaid diagram
+- API specification scaffold in docs/API_SPEC.md
+- M-PESA integration guide in docs/M-PESA_INTEGRATION.md
+- Postman collection under docs/test/api/bajetibuddy.postman_collection.json
+- Mobile E2E test placeholder in test/mobile/e2e_test.dart
+### Updated
+- Added documentation tasks to plan.md and marked complete
+- Bumped context.json last_updated timestamp
