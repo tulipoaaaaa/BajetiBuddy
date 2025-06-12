@@ -1,0 +1,46 @@
+name: Mobile Web CI/CD
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'mobile/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.10.0'
+
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: mobile
+
+      - name: Analyze
+        run: flutter analyze
+        working-directory: mobile
+
+      - name: Run tests
+        run: flutter test
+        working-directory: mobile
+
+      - name: Build web
+        run: flutter build web
+        working-directory: mobile
+
+      - name: Docker login
+        run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        env:
+          # TODO: set registry token secret
+          GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+
+      - name: Build Docker image
+        run: |
+          docker build -t ghcr.io/myorg/bajetibuddy-mobile_web:latest -f Dockerfile.web ./mobile
+          docker push ghcr.io/myorg/bajetibuddy-mobile_web:latest
