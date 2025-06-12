@@ -19,6 +19,8 @@
 - [ ] `expense-tracker` - Build manual expense entry interface
 - [ ] `budget-calculator` - Core budget calculation logic
 - [ ] `local-storage` - SQLite integration for offline data
+- [ ] `docker-setup` - Create Dockerfile for backend deployment
+- [ ] `ci-pipeline` - Initialize GitHub Actions workflow
 
 ### Phase 2: Payment Integration (M2)  
 - [ ] `mpesa-sdk` - Integrate M-Pesa Daraja API
