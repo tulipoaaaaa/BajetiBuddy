@@ -94,10 +94,13 @@ cd ../backend
 npm install
 npm run dev
 
-Environment variables (create .env files)
-mobile/.env: BACKEND_URL, MPESA_CONSUMER_KEY
-backend/.env: DATABASE_URL, OPENAI_API_KEY, MPESA_SECRET
-text
+Environment variables (copy from `.env.example`)
+mobile/bajeti_buddy/.env: BACKEND_URL, MPESA_CONSUMER_KEY
+backend/.env: PORT, MONGO_URI, OPENAI_API_KEY, MPESA_CONSUMER_KEY
+
+Configuration is loaded automatically:
+- The Node backend reads `backend/.env` via `dotenv` in `src/config/env.ts`.
+- The Flutter app expects a `.env` file under `mobile/bajeti_buddy` at build time.
 
 ### VS Code Configuration
 - Install Flutter and Dart extensions

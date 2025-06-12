@@ -154,3 +154,9 @@
 ### Updated
 - Added documentation tasks to plan.md and marked complete
 - Bumped context.json last_updated timestamp
+
+## 2025-06-19
+### Added
+- `.env.example` files under `backend` and `mobile/bajeti_buddy`
+### Updated
+- Documented environment setup and configuration loading in README
