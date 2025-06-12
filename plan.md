@@ -14,6 +14,7 @@
 
 ### Phase 1: Foundation (M1)
 - [x] `setup-flutter` - Initialize Flutter project structure
+- [x] `setup-backend` - Initialize Node.js API skeleton
 - [ ] `ui-mockups` - Create Figma designs for core screens  
 - [ ] `auth-system` - Implement user registration/login *(in progress)*
 - [ ] `expense-tracker` - Build manual expense entry interface
@@ -31,7 +32,8 @@
 - [ ] `context-training` - Fine-tune model on Kenyan financial patterns *(in progress)*
   - [ ] `training-script` - Convert CSV dataset and initiate model fine-tuning
   - [ ] `dvc-pipeline` - Set up DVC workflow for model training
-  - [ ] `recommendation-engine` - Personalized budget suggestions
+  - [x] `model-versioning` - Save model metadata and version tag
+- [ ] `recommendation-engine` - Personalized budget suggestions
 - [ ] `spending-insights` - AI-generated financial insights
 
 ### Phase 4: Robustness (M4)
