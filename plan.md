@@ -27,9 +27,10 @@
 - [ ] `expense-categorization` - ML-based expense classification
 - [ ] `bank-integration` - Connect additional Kenyan banks
 
-### Phase 3: AI Intelligence (M3)
-- [ ] `openai-integration` - Connect GPT-3.5 for advice generation
-- [ ] `context-training` - Fine-tune model on Kenyan financial patterns
+-### Phase 3: AI Intelligence (M3)
+- [ ] `openai-integration` - Connect GPT-3.5 for advice generation *(in progress)*
+- [ ] `context-training` - Fine-tune model on Kenyan financial patterns *(in progress)*
+  - [ ] `training-script` - Convert CSV dataset and initiate model fine-tuning
 - [ ] `recommendation-engine` - Personalized budget suggestions
 - [ ] `spending-insights` - AI-generated financial insights
 
