@@ -57,3 +57,9 @@
 - Updated README repository structure to reflect new mobile source layout
 - Marked `setup-flutter` task as complete in plan.md
 
+
+## 2025-06-15
+### Added
+- Created `backend` project folder with TypeScript Express skeleton
+- Implemented environment loader, server entry, API index router, auth controller stub, and error handler middleware
+- Marked new `setup-backend` task as complete in plan.md
