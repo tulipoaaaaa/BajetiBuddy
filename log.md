@@ -74,3 +74,11 @@
 - Marked AI-related tasks as in progress in plan.md
 - Added `ModelTraining` module and updated `AIRecommendations` status in context.json
 - Bumped `last_updated` timestamp
+
+## 2025-06-17
+### Added
+- Implemented `save_model_version` utility under `ml-models/pipeline`
+- Created accompanying unit test `test_versioning.py`
+### Updated
+- Recorded `model-versioning` task as complete in plan.md
+- Updated `last_updated` timestamp in context.json
