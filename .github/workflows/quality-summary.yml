@@ -1,0 +1,66 @@
+name: Code Quality Summary
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.10.0'
+
+      - name: Flutter analyze
+        run: flutter analyze
+        working-directory: mobile
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install backend dependencies
+        run: npm ci
+        working-directory: backend
+
+      - name: Run ESLint
+        run: npx eslint .
+        working-directory: backend
+
+      - name: Security scan
+        run: npm audit --audit-level=high
+        working-directory: backend
+
+      - name: Snyk vulnerability scan
+        uses: snyk/actions/node@v1
+        with:
+          command: test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} # TODO: configure Snyk token
+
+      - name: Upload static analysis reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-quality-reports
+          path: |
+            mobile/analysis.html
+            backend/eslint-report.html
+
+      - name: Post summary comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = `### Code Quality Summary\n- Flutter analyze: \u2705\n- ESLint: \u2705\n- Security scan: \u2705\n![Coverage](https://codecov.io/gh/${{ github.repository }}/branch/${{ github.head_ref }}/graph/badge.svg)`;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            });
+

@@ -1,0 +1,50 @@
+name: Flutter Coverage
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'mobile/**'
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.10.0'
+
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: mobile
+
+      - name: Run tests with coverage
+        run: flutter test --coverage
+        working-directory: mobile
+
+      - name: Verify lcov version
+        run: lcov --version
+
+      - name: Generate coverage HTML
+        run: |
+          genhtml coverage/lcov.info --output-directory coverage/html
+        working-directory: mobile
+
+      - name: Publish to GitHub Pages
+        uses: ProjectAJ14/flutter-coverage-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          path: mobile/coverage/html
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          fail_ci_if_error: true
+          # TODO: adjust min coverage threshold
+

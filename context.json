@@ -39,14 +39,15 @@
       "status": "in_progress",
       "priority": "medium"
     },
-    {
+        {
       "name": "DeploymentSetup",
       "status": "planned",
       "priority": "low"
     },
     {
       "name": "MLPipeline",
-      "status": "planned"
+      "status": "planned",
+      "priority": "medium"
     },
     {
       "name": "DeploymentPipeline",
@@ -54,9 +55,29 @@
       "priority": "medium"
     },
     {
+      "name": "CoverageReporting",
+      "status": "planned",
+      "priority": "medium"
+    },
+    {
+      "name": "PerformanceTesting",
+      "status": "planned",
+      "priority": "medium"
+    },
+    {
+      "name": "CIHealthMonitor",
+      "status": "planned",
+      "priority": "low"
+    },
+    {
+      "name": "QualityDashboard",
+      "status": "planned",
+      "priority": "medium"
+      
       "name": "BackendTests",
       "status": "in_progress",
       "priority": "low"
+
     }
   ],
   "interfaces": [
