@@ -74,3 +74,7 @@
 - Marked AI-related tasks as in progress in plan.md
 - Added `ModelTraining` module and updated `AIRecommendations` status in context.json
 - Bumped `last_updated` timestamp
+
+## 2025-06-17
+### Added
+- Created `ml-models/pipeline/README.md` outlining pipeline execution, versioning strategy, and orchestration options.
