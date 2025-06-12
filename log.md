@@ -74,3 +74,9 @@
 - Marked AI-related tasks as in progress in plan.md
 - Added `ModelTraining` module and updated `AIRecommendations` status in context.json
 - Bumped `last_updated` timestamp
+
+## 2025-06-12
+### Added
+- Added milestone for deployment automation and tasks for `ml-pipeline` and `versioning-utility` in plan.md
+### Notes
+- Documented Batch 7 preparation tasks for deploy configs, Docker, and CI workflows.

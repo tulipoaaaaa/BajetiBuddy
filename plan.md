@@ -9,6 +9,7 @@
 | M3 | AI-Powered Budget Recommendations | @tulipoaaaaa | 2025-11-15 |
 | M4 | Offline Mode & Data Sync | @tulipoaaaaa | 2025-12-31 |
 | M5 | Beta Launch & User Testing | @tulipoaaaaa | 2026-02-28 |
+| M6 | Deployment Automation & Versioning | @tulipoaaaaa | 2026-04-30 |
 
 ## Task Decomposition
 
@@ -35,9 +36,15 @@
 
 ### Phase 4: Robustness (M4)
 - [ ] `offline-core` - Ensure core features work without internet
-- [ ] `data-sync` - Bi-directional cloud synchronization  
+- [ ] `data-sync` - Bi-directional cloud synchronization
 - [ ] `performance-opt` - Optimize for low-end Android devices
 - [ ] `security-audit` - Comprehensive security review
+
+### Phase 5: Deployment Automation (M6)
+- [ ] `ml-pipeline` - Build reproducible machine learning pipeline
+- [ ] `versioning-utility` - Automate dataset and model version tracking
+
+*Note*: Batch 7 preparation will scaffold `deploy/` configs, Docker setup, CI workflows, and GitHub Actions.
 
 ## Architecture Overview
 
