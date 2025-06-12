@@ -74,3 +74,12 @@
 - Marked AI-related tasks as in progress in plan.md
 - Added `ModelTraining` module and updated `AIRecommendations` status in context.json
 - Bumped `last_updated` timestamp
+
+## 2025-06-17
+### Added
+- Completed ML pipeline scripts integrating data preparation and training stages.
+- Introduced initial `dvc.yaml` and `.dvc` configuration for dataset versioning.
+- Documented pipeline usage and setup steps in `ml-models/README.md`.
+### Updated
+- Prepared Batch 7 deployment scaffolding and noted upcoming tasks.
+
