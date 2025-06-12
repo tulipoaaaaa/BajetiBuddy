@@ -1,0 +1,48 @@
+name: Backend Coverage & Sharding
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'backend/**'
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        shard: [1, 2] # TODO: tune shard count when tests exceed 200
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: backend
+
+      - name: Run Jest shard
+        run: |
+          TEST_FILES=$(npx jest --listTests | awk "NR % 2 == $((\${{matrix.shard}} - 1))")
+          npx jest --coverage $TEST_FILES
+        working-directory: backend
+
+      - name: Verify lcov version
+        run: lcov --version
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: backend-coverage-${{ matrix.shard }}
+          path: backend/coverage
+
+      - name: Publish coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          flags: backend
+          fail_ci_if_error: true
+

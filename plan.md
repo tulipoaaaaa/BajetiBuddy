@@ -53,6 +53,11 @@
 - [x] `deploy-automation` - Remote deploy workflow
 - [ ] `ml-pipeline` - Build reproducible machine learning pipeline
 - [ ] `versioning-utility` - Automate dataset and model version tracking
+- [ ] `ci-coverage` - Add code coverage reporting for Flutter and backend
+- [ ] `test-sharding` - Parallelize backend tests
+- [ ] `ci-health-monitor` - Monitor CI uptime with alerts
+- [ ] `ci-performance` - Integrate performance benchmarks
+- [ ] `quality-dashboard` - Summarize code quality on pull requests
 
 *Note*: Batch 7 preparation will scaffold `deploy/` configs, Docker setup, CI workflows, and GitHub Actions.
 

@@ -1,0 +1,51 @@
+name: Performance Tests
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  performance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install load test tool
+        run: npm install -g artillery
+
+      - name: Backend load test
+        run: |
+          artillery run backend/loadtests/basic.yml -o backend/loadtests/report.json
+          AVG=$(jq '.aggregate.latency.mean' backend/loadtests/report.json)
+          if [ $AVG -gt 500 ]; then
+            echo "Average latency $AVG ms exceeds threshold" && exit 1
+          fi
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.10.0'
+
+      - name: Flutter dependencies
+        run: flutter pub get
+        working-directory: mobile
+
+      - name: Run flutter performance benchmark
+        run: flutter drive --driver=test_driver/perf_test.dart --target=test_driver/perf_test.dart
+        working-directory: mobile
+
+      - name: Upload performance artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: performance-results
+          path: |
+            backend/loadtests/report.json
+            mobile/build/**/performance
+          # TODO: adjust latency threshold and artifact paths
+

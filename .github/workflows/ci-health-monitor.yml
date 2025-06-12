@@ -1,0 +1,21 @@
+name: CI/CD Health Monitor
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CI dial-tone
+        run: echo "CI dial-tone"
+
+      - name: Notify Slack on failure
+        if: failure()
+        uses: ravsamhq/notify-slack-action@v1
+        with:
+          status: ${{ job.status }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # TODO: set Slack webhook
+

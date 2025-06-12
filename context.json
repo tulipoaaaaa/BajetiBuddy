@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "project_name": "BajetiBuddy",
-  "last_updated": "2025-06-17T00:00:00Z",
+  "last_updated": "2025-06-17T12:00:00Z",
 
   "modules": [
     {
@@ -39,16 +39,39 @@
       "status": "in_progress",
       "priority": "medium"
     },
-    {
+        {
       "name": "DeploymentSetup",
       "status": "planned",
       "priority": "low"
-
+    },
+    {
       "name": "MLPipeline",
       "status": "planned",
-
+      "priority": "medium"
+    },
+    {
       "name": "DeploymentPipeline",
       "status": "in_progress",
+      "priority": "medium"
+    },
+    {
+      "name": "CoverageReporting",
+      "status": "planned",
+      "priority": "medium"
+    },
+    {
+      "name": "PerformanceTesting",
+      "status": "planned",
+      "priority": "medium"
+    },
+    {
+      "name": "CIHealthMonitor",
+      "status": "planned",
+      "priority": "low"
+    },
+    {
+      "name": "QualityDashboard",
+      "status": "planned",
       "priority": "medium"
     }
   ],
