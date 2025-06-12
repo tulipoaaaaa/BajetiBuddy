@@ -38,9 +38,15 @@
 
 ### Phase 4: Robustness (M4)
 - [ ] `offline-core` - Ensure core features work without internet
-- [ ] `data-sync` - Bi-directional cloud synchronization  
+- [ ] `data-sync` - Bi-directional cloud synchronization
 - [ ] `performance-opt` - Optimize for low-end Android devices
 - [ ] `security-audit` - Comprehensive security review
+
+### Phase 5: Deployment & CI/CD (M5)
+- [x] `docker-compose` - Docker Compose stack for production
+- [x] `github-actions-backend` - Backend CI pipeline
+- [x] `github-actions-mobile` - Mobile CI pipeline
+- [x] `deploy-automation` - Remote deploy workflow
 
 ## Architecture Overview
 

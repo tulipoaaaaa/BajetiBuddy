@@ -2,6 +2,7 @@
   "version": "0.1.0",
   "project_name": "BajetiBuddy",
   "last_updated": "2025-06-17T00:00:00Z",
+
   "modules": [
     {
       "name": "AuthSystem",
@@ -35,6 +36,11 @@
     },
     {
       "name": "ModelTraining",
+      "status": "in_progress",
+      "priority": "medium"
+    },
+    {
+      "name": "DeploymentPipeline",
       "status": "in_progress",
       "priority": "medium"
     }

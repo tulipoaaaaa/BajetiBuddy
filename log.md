@@ -107,3 +107,10 @@
 ### Updated
 - Added package init for inference and mocked OpenAI calls in tests
 
+## 2025-06-16
+### Added
+- Docker Compose config in `deploy/docker-compose.yml` for backend, mobile web, and nginx services
+- Nginx reverse proxy config in `deploy/nginx/default.conf`
+- GitHub Actions workflows for backend, mobile, and deployment CI/CD
+### Updated
+- Initial deployment pipeline setup scaffolded
