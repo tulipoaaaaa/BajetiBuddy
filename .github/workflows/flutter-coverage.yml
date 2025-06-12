@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'mobile/**'
+      - 'mobile/bajeti_buddy/**'
   pull_request:
     branches: [ main ]
 
@@ -22,11 +22,11 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Run tests with coverage
         run: flutter test --coverage
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Verify lcov version
         run: lcov --version
@@ -34,13 +34,13 @@ jobs:
       - name: Generate coverage HTML
         run: |
           genhtml coverage/lcov.info --output-directory coverage/html
-        working-directory: mobile
+        working-directory: mobile/bajeti_buddy
 
       - name: Publish to GitHub Pages
         uses: ProjectAJ14/flutter-coverage-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          path: mobile/coverage/html
+          path: mobile/bajeti_buddy/coverage/html
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
