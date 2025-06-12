@@ -1,0 +1,134 @@
+{
+  "version": "0.1.0",
+  "project_name": "BajetiBuddy",
+  "last_updated": "2025-06-12T13:02:00Z",
+  "modules": [
+    { "name": "AuthSystem", "status": "planned", "priority": "high" },
+    { "name": "ExpenseTracker", "status": "planned", "priority": "high" },
+    { "name": "BudgetCalculator", "status": "planned", "priority": "high" },
+    { "name": "MpesaIntegration", "status": "planned", "priority": "medium" },
+    { "name": "AIRecommendations", "status": "planned", "priority": "medium" },
+    { "name": "OfflineSync", "status": "planned", "priority": "low" }
+  ],
+  "interfaces": [
+    {
+      "endpoint": "/v1/auth/login",
+      "method": "POST", 
+      "schema": "see plan.md",
+      "status": "planned"
+    },
+    {
+      "endpoint": "/v1/expenses/create",
+      "method": "POST",
+      "schema": "see plan.md", 
+      "status": "planned"
+    },
+    {
+      "endpoint": "/v1/ai/budget-advice",
+      "method": "POST",
+      "schema": "see plan.md",
+      "status": "planned"
+    }
+  ],
+  "flags": {
+    "offline_mode": true,
+    "target_platform": ["android_low_end"],
+    "currency": "KES",
+    "language_support": ["en", "sw"],
+    "ai_enabled": true,
+    "mpesa_integration": true,
+    "local_encryption": true,
+    "cloud_sync": true,
+    "performance_monitoring": true
+  },
+  "environment": {
+    "flutter_version": "3.10+",
+    "node_version": "18+",
+    "target_android": "7.0+",
+    "min_ram": "2GB"
+  },
+  "external_services": {
+    "openai": {
+      "model": "gpt-3.5-turbo",
+      "max_tokens": 500,
+      "cost_target": 0.10
+    },
+    "mpesa": {
+      "api_version": "v1",
+      "environment": "sandbox"
+    },
+    "database": {
+      "local": "sqlite",
+      "cloud": "postgresql"
+    }
+  },
+  "tests": {
+    "examples": [
+      {
+        "id": "budget-calc-001",
+        "description": "Basic budget calculation for Kenyan household",
+        "input": {
+          "income": 30000,
+          "expenses": [8000, 5000, 7000, 3000],
+          "categories": ["rent", "food", "transport", "utilities"]
+        },
+        "expected_output": {
+          "recommended_savings": 6000,
+          "remaining_discretionary": 1000,
+          "budget_health": "good"
+        }
+      },
+      {
+        "id": "expense-categorize-001", 
+        "description": "M-Pesa transaction categorization",
+        "input": {
+          "transaction": "MPESA Receipt ABC123 Confirmed. Ksh500.00 paid to NAIVAS SUPERMARKET",
+          "amount": 500,
+          "merchant": "NAIVAS SUPERMARKET"
+        },
+        "expected_output": {
+          "category": "food_groceries",
+          "confidence": 0.92,
+          "subcategory": "groceries"
+        }
+      },
+      {
+        "id": "ai-advice-001",
+        "description": "Budget optimization for middle-income user",
+        "input": {
+          "monthly_income": 45000,
+          "current_expenses": {
+            "rent": 15000,
+            "food": 12000, 
+            "transport": 5000,
+            "utilities": 3000
+          },
+          "savings_goal": 8000
+        },
+        "expected_output": {
+          "achievable": true,
+          "recommendations": [
+            {
+              "category": "food",
+              "reduction": 2000,
+              "suggestion": "Consider bulk shopping at local markets"
+            }
+          ],
+          "timeline": "2_months"
+        }
+      }
+    ],
+    "performance_benchmarks": {
+      "app_launch_time_ms": 3000,
+      "budget_calc_time_ms": 1000,
+      "ai_response_time_ms": 5000,
+      "offline_sync_time_ms": 10000
+    }
+  },
+  "security": {
+    "encryption": "AES-256",
+    "auth_method": "JWT",
+    "data_retention_days": 365,
+    "pii_storage": "local_only"
+  }
+}
