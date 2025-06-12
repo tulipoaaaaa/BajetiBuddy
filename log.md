@@ -82,7 +82,11 @@
 
 ## 2025-06-17
 ### Added
-
+- Completed ML pipeline scripts integrating data preparation and training stages.
+- Introduced initial `dvc.yaml` and `.dvc` configuration for dataset versioning.
+- Documented pipeline usage and setup steps in `ml-models/README.md`.
+### Updated
+- Prepared Batch 7 deployment scaffolding and noted upcoming tasks.
 - Created `dvc.yaml` with preprocess, train, evaluate and deploy stages
 - Added `ml-models/pipeline/ml_pipeline.py` script placeholder
 ### Updated
