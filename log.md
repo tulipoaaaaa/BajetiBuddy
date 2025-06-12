@@ -50,3 +50,10 @@
 - Created .gitignore to exclude binary icon assets under mobile and web directories
 - Added placeholder asset directories and pubspec.yaml referencing them
 
+## 2025-06-14
+### Added
+- Initialized Flutter `lib` structure with main entry point and core utilities
+- Implemented constants, theme setup, formatters, and basic user model
+- Updated README repository structure to reflect new mobile source layout
+- Marked `setup-flutter` task as complete in plan.md
+
