@@ -15,10 +15,10 @@
 ### Phase 1: Foundation (M1)
 - [x] `setup-flutter` - Initialize Flutter project structure
 - [ ] `ui-mockups` - Create Figma designs for core screens  
-- [ ] `auth-system` - Implement user registration/login
+- [x] `auth-system` - Implement user registration/login
 - [ ] `expense-tracker` - Build manual expense entry interface
 - [ ] `budget-calculator` - Core budget calculation logic
-- [ ] `local-storage` - SQLite integration for offline data
+- [x] `local-storage` - SQLite integration for offline data
 
 ### Phase 2: Payment Integration (M2)  
 - [ ] `mpesa-sdk` - Integrate M-Pesa Daraja API

@@ -57,3 +57,17 @@
 - Updated README repository structure to reflect new mobile source layout
 - Marked `setup-flutter` task as complete in plan.md
 
+## 2025-06-12
+### Added
+- Auth feature controller, login view, and service stubs
+- Budget model and service with SharedPreferences persistence
+- Marked auth-system and local-storage tasks complete in plan.md
+
+## 2025-06-15
+### Added
+- Auth viewmodel for login screen
+- Budget view with income and expenses display
+- Budget controller managing expense updates
+- Shared expense tile widget for lists
+- Initial English localization file
+

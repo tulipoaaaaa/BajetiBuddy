@@ -1,0 +1,9 @@
+{
+  "@@locale": "en",
+  "appTitle": "BajetiBuddy",
+  "loginLabel": "Login",
+  "logoutLabel": "Logout",
+  "budgetTitle": "Budget",
+  "addExpenseLabel": "Add Expense",
+  "TODO_please_translate": "Pending Swahili translations"
+}
