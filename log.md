@@ -154,3 +154,11 @@
 ### Updated
 - Added documentation tasks to plan.md and marked complete
 - Bumped context.json last_updated timestamp
+
+## 2025-06-19
+### Added
+- `ml-models/__init__.py` to make ML scripts importable as a package
+- `ml-models/requirements.txt` listing OpenAI, DVC and testing deps
+- Basic installation instructions in `ml-models/README.md`
+### Updated
+- Bumped `last_updated` timestamp in context.json
