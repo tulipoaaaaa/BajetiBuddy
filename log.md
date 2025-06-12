@@ -74,3 +74,9 @@
 - Marked AI-related tasks as in progress in plan.md
 - Added `ModelTraining` module and updated `AIRecommendations` status in context.json
 - Bumped `last_updated` timestamp
+
+## 2025-06-12
+### Added
+- Created ml-models/pipeline with stub ml_pipeline.py logging pipeline steps
+### Updated
+- Added package init for inference and mocked OpenAI calls in tests
