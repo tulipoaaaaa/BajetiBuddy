@@ -9,6 +9,7 @@
 | M3 | AI-Powered Budget Recommendations | @tulipoaaaaa | 2025-11-15 |
 | M4 | Offline Mode & Data Sync | @tulipoaaaaa | 2025-12-31 |
 | M5 | Beta Launch & User Testing | @tulipoaaaaa | 2026-02-28 |
+| M6 | Deployment Automation & Versioning | @tulipoaaaaa | 2026-04-30 |
 
 ## Task Decomposition
 
@@ -42,11 +43,18 @@
 - [ ] `performance-opt` - Optimize for low-end Android devices
 - [ ] `security-audit` - Comprehensive security review
 
-### Phase 5: Deployment & CI/CD (M5)
+
+### Phase 5: Deployment & CI/CD / Automation (M5 & M6)
 - [x] `docker-compose` - Docker Compose stack for production
 - [x] `github-actions-backend` - Backend CI pipeline
 - [x] `github-actions-mobile` - Mobile CI pipeline
 - [x] `deploy-automation` - Remote deploy workflow
+- [ ] `ml-pipeline` - Build reproducible machine learning pipeline
+- [ ] `versioning-utility` - Automate dataset and model version tracking
+
+*Note*: Batch 7 preparation will scaffold `deploy/` configs, Docker setup, CI workflows, and GitHub Actions.
+
+
 
 ## Architecture Overview
 
