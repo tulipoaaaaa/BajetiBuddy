@@ -30,7 +30,8 @@
 - [ ] `openai-integration` - Connect GPT-3.5 for advice generation *(in progress)*
 - [ ] `context-training` - Fine-tune model on Kenyan financial patterns *(in progress)*
   - [ ] `training-script` - Convert CSV dataset and initiate model fine-tuning
-- [ ] `recommendation-engine` - Personalized budget suggestions
+  - [ ] `dvc-pipeline` - Set up DVC workflow for model training
+  - [ ] `recommendation-engine` - Personalized budget suggestions
 - [ ] `spending-insights` - AI-generated financial insights
 
 ### Phase 4: Robustness (M4)
