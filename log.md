@@ -130,3 +130,13 @@
 ### Updated
 - Initial deployment pipeline setup scaffolded
 
+
+## 2025-06-18
+### Added
+- Jest configuration file for backend unit tests
+- Sample unit tests for Auth and Budget controllers with Supertest
+- Integration test stub for MPESA endpoint
+- Postman CI config under docs/test/api
+### Updated
+- Added `backend-tests` task in plan.md
+- Added `BackendTests` module in context.json and bumped timestamp

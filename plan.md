@@ -23,6 +23,7 @@
 - [ ] `local-storage` - SQLite integration for offline data
 - [ ] `docker-setup` - Create Dockerfile for backend deployment
 - [ ] `ci-pipeline` - Initialize GitHub Actions workflow
+- [ ] `backend-tests` - Add Jest unit and integration tests
 
 ### Phase 2: Payment Integration (M2)  
 - [ ] `mpesa-sdk` - Integrate M-Pesa Daraja API

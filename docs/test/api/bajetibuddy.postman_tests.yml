@@ -1,0 +1,7 @@
+version: '1'
+name: BajetiBuddy API Tests
+scripts:
+  run: >-
+    newman run docs/test/api/bajetibuddy.collection.json \
+      -e docs/test/api/bajetibuddy.environment.json \
+      --bail --reporters cli
