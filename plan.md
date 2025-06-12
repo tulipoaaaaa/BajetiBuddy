@@ -9,11 +9,13 @@
 | M3 | AI-Powered Budget Recommendations | @tulipoaaaaa | 2025-11-15 |
 | M4 | Offline Mode & Data Sync | @tulipoaaaaa | 2025-12-31 |
 | M5 | Beta Launch & User Testing | @tulipoaaaaa | 2026-02-28 |
+| M6 | Deployment Automation & Versioning | @tulipoaaaaa | 2026-04-30 |
 
 ## Task Decomposition
 
 ### Phase 1: Foundation (M1)
 - [x] `setup-flutter` - Initialize Flutter project structure
+- [x] `setup-backend` - Initialize Node.js API skeleton
 - [ ] `ui-mockups` - Create Figma designs for core screens  
 - [ ] `auth-system` - Implement user registration/login *(in progress)*
 - [ ] `expense-tracker` - Build manual expense entry interface
@@ -32,14 +34,29 @@
 - [ ] `openai-integration` - Connect GPT-3.5 for advice generation *(in progress)*
 - [ ] `context-training` - Fine-tune model on Kenyan financial patterns *(in progress)*
   - [ ] `training-script` - Convert CSV dataset and initiate model fine-tuning
+  - [ ] `dvc-pipeline` - Set up DVC workflow for model training
+  - [x] `model-versioning` - Save model metadata and version tag
 - [ ] `recommendation-engine` - Personalized budget suggestions
 - [ ] `spending-insights` - AI-generated financial insights
 
 ### Phase 4: Robustness (M4)
 - [ ] `offline-core` - Ensure core features work without internet
-- [ ] `data-sync` - Bi-directional cloud synchronization  
+- [ ] `data-sync` - Bi-directional cloud synchronization
 - [ ] `performance-opt` - Optimize for low-end Android devices
 - [ ] `security-audit` - Comprehensive security review
+
+
+### Phase 5: Deployment & CI/CD / Automation (M5 & M6)
+- [x] `docker-compose` - Docker Compose stack for production
+- [x] `github-actions-backend` - Backend CI pipeline
+- [x] `github-actions-mobile` - Mobile CI pipeline
+- [x] `deploy-automation` - Remote deploy workflow
+- [ ] `ml-pipeline` - Build reproducible machine learning pipeline
+- [ ] `versioning-utility` - Automate dataset and model version tracking
+
+*Note*: Batch 7 preparation will scaffold `deploy/` configs, Docker setup, CI workflows, and GitHub Actions.
+
+
 
 ## Architecture Overview
 
