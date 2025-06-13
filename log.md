@@ -164,3 +164,13 @@
 - `ml-models/requirements.txt` listing OpenAI, DVC and testing deps
 - Basic installation instructions in `ml-models/README.md`
 - Bumped `last_updated` timestamp in context.json
+
+## 2025-06-20
+### Added
+- AuthViewModel and repository layer under mobile features
+- BudgetRepository scaffold with local persistence TODOs
+- Shared custom button widget and config loader
+- Asset placeholder directories with pubspec references
+- Analysis options and testing folder placeholders
+### Updated
+- mobile/bajeti_buddy/pubspec.yaml to include new asset paths
