@@ -4,3 +4,5 @@ flutter:
   assets:
     - Assets.xcassets/
     - ../../web/icons/
+    - ../assets/icons/
+    - ../assets/images/
