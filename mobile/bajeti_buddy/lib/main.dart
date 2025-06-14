@@ -34,6 +34,7 @@ class BajetiBuddyApp extends StatelessWidget {
         debugShowCheckedModeBanner: AppConstants.debugMode,
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
+        home: const HomePage(),
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -42,5 +43,18 @@ class BajetiBuddyApp extends StatelessWidget {
   Route<dynamic>? _onGenerateRoute(RouteSettings settings) {
     // TODO: Configure deep linking for M-Pesa callbacks
     return null;
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text('BajetiBuddy up and running 🎉'),
+      ),
+    );
   }
 }
